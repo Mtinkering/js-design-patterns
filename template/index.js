@@ -1,6 +1,6 @@
 
 (function () {
-
+  // Template Class that contains the core algorithm
   class Autocomplete {
     constructor() {
       this.timeout = null;
@@ -22,6 +22,7 @@
     }
   }
 
+  // Derived class that has specific implementation
   class ItunesAutocomplete extends Autocomplete {
     request(searchTerm) {
 
@@ -35,6 +36,7 @@
     }
   }
 
+  // Another derivation. Could be something completely different
   class FacebookAutocomplete extends Autocomplete {
     request(searchTerm) {
 
@@ -48,6 +50,7 @@
     }
   }
 
+  // Debounce on keyup
   let itunesAutocomplete = new ItunesAutocomplete();
   const searchBox = document.getElementById('search-box');
   searchBox.addEventListener('keyup', function () {
